@@ -1,5 +1,6 @@
 import React from 'react';
 import Statistics from '../statistics/Statistics';
+import Notification from '../notification/Notification';
 import { 
     Title,
     Wrap,
@@ -36,6 +37,15 @@ class Counter extends React.Component{
         
         }));
     };
+    countTotalFeedback = () => {
+    const { good, neutral, bad } = this.state;
+    const total = good + neutral + bad;
+    return total;
+    };
+    countPositivePercentage = () => {
+    const { good } = this.state;
+    return Math.round((good / this.countTotalFeedback()) * 100) || 0;
+  };
 
     render() {
         return (
@@ -47,11 +57,17 @@ class Counter extends React.Component{
                 <Button type="button" onClick={this.handleIncrementBad}>bad</Button>
                 </Wrap>
 
-                <Statistics
-                    good={this.state.good}
-                    neutral={this.state.neutral}
-                    bad={this.state.bad}
-                />    
+                {this.countTotalFeedback() ? (
+                    <Statistics
+                        good={this.state.good}
+                        neutral={this.state.neutral}
+                        bad={this.state.bad}
+                        total={this.countTotalFeedback()}
+                        positivePercentage={this.countPositivePercentage()}
+                    />
+                ) : (
+                    <Notification message="There is no feedback"
+                    />)}
                  </div>
               
               

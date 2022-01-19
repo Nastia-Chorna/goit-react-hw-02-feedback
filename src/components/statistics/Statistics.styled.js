@@ -12,7 +12,7 @@ margin-top: 15px;
 `
 export const Stats = styled.ul`
 margin: 0 auto;
-width: 400px;
+width: 600px;
 display: flex;
 justify-content: space-between;
 text-decoration: none;

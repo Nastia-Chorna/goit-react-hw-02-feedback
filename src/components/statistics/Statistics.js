@@ -5,7 +5,7 @@ Stats
     
     
 } from "./Statistics.styled";
-const Statistics = ({good, neutral, bad}) => (
+const Statistics = ({good, neutral, bad, total, positivePercentage}) => (
 <div>
 <Title>Statistics</Title>
                 <div className="Wrap">
@@ -13,6 +13,8 @@ const Statistics = ({good, neutral, bad}) => (
                 <li>Good: {good} </li>
                 <li>Neutral: {neutral} </li>
                 <li>Bad: {bad} </li>
+                <li>Total: {total}</li>
+                <li>Positive feedback: {positivePercentage}%</li>
                     </Stats>
         </div>
         </div>
