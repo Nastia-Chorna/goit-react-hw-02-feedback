@@ -1,14 +1,19 @@
 import React from 'react';
-
+import { 
+    Title,
+Stats
+    
+    
+} from "./Statistics.styled";
 const Statistics = ({good, neutral, bad}) => (
 <div>
-<title>Statistics</title>
+<Title>Statistics</Title>
                 <div className="Wrap">
-                    <ul>
+                    <Stats>
                 <li>Good: {good} </li>
                 <li>Neutral: {neutral} </li>
                 <li>Bad: {bad} </li>
-                    </ul>
+                    </Stats>
         </div>
         </div>
 
