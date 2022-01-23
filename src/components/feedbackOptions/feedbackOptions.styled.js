@@ -13,7 +13,7 @@ margin-top: 15px;
 `
 
 export const Wrap = styled.div`
-margin: 0 auto;
+margin-left: 10px;
 width: 400px;
 display: flex;
 justify-content: space-between;

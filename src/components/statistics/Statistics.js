@@ -1,13 +1,13 @@
 import React from 'react';
 import { 
-    Title,
+
 Stats
     
     
 } from "./Statistics.styled";
 const Statistics = ({good, neutral, bad, total, positivePercentage}) => (
 <div>
-<Title>Statistics</Title>
+
                 <div className="Wrap">
                     <Stats>
                 <li>Good: {good} </li>
